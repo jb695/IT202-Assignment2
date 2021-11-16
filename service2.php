@@ -32,16 +32,15 @@ echo '<br><br><a href="service1.php">Click here to go back to the list of servic
 $ucid = $_SESSION["ucid"];
 
 
-$choice = $_POST["choice"];
 
-if($choice == "Create")
+
+
+$choice = safe("choice");
+
+if($choice == "List")
 	{
-		$ingredient1 = $_POST["ingredient1");
-		$ingredient2 = $_POST["ingredient1");
-		$ingredient3 = $_POST["ingredient1");
-		$calories = $_POST["calories");
-		create($ingredient1, $ingredient2, $ingredient3, $calories);
-		//the Create Recipe Database function should insert these values into the Recipe Table and return a message of successful insertion
+		$number = safe("number");
+		retrieve($ucid, $number);
 	}
 
 if($choice == "Perform")
