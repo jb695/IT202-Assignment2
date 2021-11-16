@@ -33,7 +33,7 @@ $pin = mt_rand ( 1000 , 9999 );
 //mail pin
 $subject = "Your Pin";
 $message  = $pin;
-$to   = "jb695@njit.edu";   //spam
+$to   = "jb*******.***";   //spam
 mail ( $to, $subject, $message );
 //remember the pin
 $_SESSION["pin"] = $pin;
